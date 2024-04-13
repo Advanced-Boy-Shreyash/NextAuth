@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Authentication App
+
+This project is a basic authentication app built using Next.js. It allows users to sign up, log in, and access authenticated routes. Additionally, email verification is required for successful login.
+
+## Features
+
+- User Sign Up: Users can create a new account by providing their email and password.
+- Email Verification: After signing up, users receive an email with a verification link. They must verify their email before being able to log in.
+- User Log In: Once their email is verified, users can log in with their credentials.
+- Protected Routes: Certain routes are protected and can only be accessed by authenticated users.
+
+## Technologies Used
+
+- Next.js: A React framework for building server-side rendered applications.
+- React: A JavaScript library for building user interfaces.
+- Node.js: A JavaScript runtime for building server-side applications.
+- Express.js: A minimal and flexible Node.js web application framework.
+- MongoDB: A NoSQL database used for storing user data.
+- JSON Web Tokens (JWT): For authenticating users and creating secure access tokens.
+- Nodemailer: For sending verification emails to users.
+- bcrypt: For hashing passwords before storing them in the database.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js installed on your machine.
+- MongoDB installed locally or accessible remotely.
+- SMTP server for sending emails (e.g., Gmail, SendGrid).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/Advanced-Boy-Shreyash/NextAuth.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   cd nextauth
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+4. Set up environment variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Create a `.env` file in the root directory and add the following variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
+    MONGO_URI = <your-mongodb-uri>
+    TOKEN_SECRET = <your-jwt-secret>
+    DOMAIN = http://localhost:3000
+    EMAIL_HOST = <your-smtp-host>
+    EMAIL_PORT = <your-smtp-port>
+    EMAIL_USER = <your-smtp-email>
+    EMAIL_PASSWORD = <your-smtp-password>
+   ```
+
+### Usage
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000` to access the application.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems or have suggestions for improvements.
