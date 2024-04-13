@@ -2,6 +2,8 @@
 
 This project is a basic authentication app built using Next.js. It allows users to sign up, log in, and access authenticated routes. Additionally, email verification is required for successful login.
 
+## Check the app here: [NextAuth](https://next-auth-ten-sigma.vercel.app)
+
 ## Features
 
 - User Sign Up: Users can create a new account by providing their email and password.
